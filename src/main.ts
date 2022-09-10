@@ -1,4 +1,7 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp } from "vue";
+import App from "./App.vue";
+import MloyaltyPlugin from ".";
 
-createApp(App).mount('#app');
+const app = createApp(App);
+app.use(MloyaltyPlugin);
+app.mount("#app");

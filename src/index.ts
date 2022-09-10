@@ -1,12 +1,11 @@
-import type { App } from 'vue';
-import '@/assets/css/index.scss';
-import { MlButton, MlIcon } from '@/components';
+import type { App } from "vue";
+import { MlButton } from "./components";
+import "@/assets/css/index.scss";
 
 export default {
   install: (app: App) => {
-    app.component(MlButton.name, MlButton);
-    app.component(MlIcon.name, MlIcon);
+    app.component("MlButton", MlButton);
   },
 };
 
-export { MlButton, MlIcon };
+export { MlButton };

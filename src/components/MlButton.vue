@@ -1,12 +1,10 @@
-<script lang="ts" setup name="MlButton"></script>
+<script lang="ts" setup></script>
 
 <template>
-  <button ref="color" class="ml-button">
-    <slot />
-  </button>
+  <button class="ml-button"><slot /></button>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .ml-button {
   background-color: var(--ml-primary);
   outline: none;
