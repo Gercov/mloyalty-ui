@@ -3,25 +3,22 @@ import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 
 import vue from "@vitejs/plugin-vue";
-import typescript2 from "rollup-plugin-typescript2";
 import svgLoader from "vite-svg-loader";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     svgLoader(),
-    typescript2({
-      check: false,
-      include: ["src/components/*.vue"],
-      tsconfigOverride: {
-        compilerOptions: {
-          sourceMap: true,
-          declaration: true,
-          declarationMap: true,
-        },
-        exclude: ["vite.config.ts", "main.ts"],
+    dts({
+      include: ["src/components/*", "src/index.ts"],
+      compilerOptions: {
+        sourceMap: true,
+        declaration: true,
+        declarationMap: true,
       },
+      exclude: ["vite.config.ts", "main.ts"],
     }),
   ],
   resolve: {
