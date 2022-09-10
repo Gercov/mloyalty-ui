@@ -1,12 +1,13 @@
 import type { App } from 'vue';
-import { MlButton, MlIcon } from '@/components';
 import '@/assets/css/index.scss';
+import * as components from '@/components';
 
 export default {
   install: (app: App) => {
-    app.component('MlButton', MlButton);
-    app.component('MlIcon', MlIcon);
+    for (const componentKey in components) {
+      app.use((components as any)[componentKey]);
+    }
   },
 };
 
-export { MlButton, MlIcon };
+export * from '@/components';
