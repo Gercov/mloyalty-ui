@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export { MlButton, MlButton };
+export { MlButton, MlIcon };

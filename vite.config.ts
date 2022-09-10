@@ -16,8 +16,7 @@ export default defineConfig({
     typescript2({
       check: false,
       include: [
-        'src/components/*/*.ts',
-        'src/components/*/*.vue',
+        'src/components/*.vue',
         'src/components/index.ts',
         'src/index.ts',
       ],
