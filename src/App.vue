@@ -1,13 +1,13 @@
-<script setup lang="ts">
-import MlIcon from "./components/MlIcon.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header>
     <div class="wrapper">
-      <h3>hi</h3>
-      <MlButton>123</MlButton>
-      <MlIcon icon="checkmark"></MlIcon>
+      <ml-result
+        status="success"
+        title="Не понял, что нужно сделать"
+        message="Задайте правильно адрес страницы или напишите нам на адрес info@mloyalty.ru"
+      />
     </div>
   </header>
 </template>
