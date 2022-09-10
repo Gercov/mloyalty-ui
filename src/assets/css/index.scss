@@ -1,0 +1,14 @@
+@import './fonts.scss';
+
+:root {
+  --ml-primary: #000000;
+  --ml-white: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
