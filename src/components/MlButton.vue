@@ -13,7 +13,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 24px;
+  padding: 14px 24px;
   border-radius: 5px;
+  cursor: pointer;
 }
 </style>
