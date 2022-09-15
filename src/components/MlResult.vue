@@ -3,17 +3,19 @@ defineProps<{
   title: string;
   message: string;
   status: "success" | "error";
+  img: string;
 }>();
 </script>
 
 <template>
   <div class="ml-result">
     <div class="ml-result__icon">
-      <span v-if="status === 'error'"> :( </span>
+      <img v-if="img" :src="img" />
       <MlIcon v-else-if="status === 'success'" icon="checkmark" />
+      <span v-else-if="status === 'error'"> :( </span>
     </div>
     <h1 class="ml-result__title">
-      {{ title || "Что-то пошло не так" }}
+      {{ title }}
     </h1>
     <p class="ml-result__message" v-if="message">
       {{ message }}
@@ -30,6 +32,13 @@ defineProps<{
       font-weight: 300;
       font-size: 91px;
       line-height: 128px;
+    }
+
+    img {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      max-width: 360px;
     }
   }
 
