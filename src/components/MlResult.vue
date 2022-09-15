@@ -37,6 +37,7 @@ defineProps<{
   &__message {
     line-height: 28px;
     font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
   &__title {
@@ -49,6 +50,7 @@ defineProps<{
     font-size: 14px;
     max-width: 278px;
     color: $dark-variant;
+    font-weight: 500;
   }
 }
 </style>
